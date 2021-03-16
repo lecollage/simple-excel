@@ -4,12 +4,12 @@
 .excel {
   &__toolbar {
     position: absolute;
+    top: $header-height;
     display: flex;
     padding: 7px 10px;
     border-top: 1px solid $border-color;
     border-bottom: 1px solid $border-color;
     height: $toolbar-height;
-    top: $header-height;
     width: 100%;
     // background-color: azure;
 
