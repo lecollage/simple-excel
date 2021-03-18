@@ -4,21 +4,21 @@
 .excel {
   &__formula {
     position: absolute;
-    top: $header-height + $toolbar-height;
+    top: $excel-header-height + $excel-toolbar-height;
     display: flex;
-    height: $formula-height;
+    height: $excel-formula-height;
     width: 100%;
     left: 0;
     right: 0;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $excel-border-color;
 
     & .info {
       font-size: 18px;
       font-style: italic;
       text-align: center;
-      min-width: $info-cell-width;
-      color: $border-color;
-      border-right: 1px solid $border-color;
+      min-width: $excel-info-cell-width;
+      color: $excel-border-color;
+      border-right: 1px solid $excel-border-color;
     }
 
     & .input {

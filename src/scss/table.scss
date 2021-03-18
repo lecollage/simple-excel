@@ -4,13 +4,29 @@
 .excel {
   &__table {
     position: absolute;
-    top: $header-height + $toolbar-height + $formula-height;
+    top: $excel-header-height + $excel-toolbar-height + $excel-formula-height;
+    left: 0;
+    right: 0;
+    overflow-x: auto;
+    padding-bottom: 2px;
 
     & .row {
       display: flex;
     }
 
+    & .row:nth-child(1) {
+      background-color: $excel-info-column-color;
+    }
+
     & .row-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: $excel-row-height;
+      min-width: $excel-info-cell-width;
+      background-color: $excel-info-column-color;
+      border-bottom: 1px $excel-border-color solid;
+      border-right: 1px $excel-border-color solid;
     }
 
     & .row-data {
@@ -21,13 +37,25 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: $cell-width;
-      height: $row-height;
-      text-align: center;
-      vertical-align: middle;
-      background-color: $info-column-color;
-      border-bottom: 1px $border-color solid;
-      border-right: 1px $border-color solid;
+      width: $excel-cell-width;
+      height: $excel-row-height;
+      border-bottom: 1px $excel-border-color solid;
+      border-right: 1px $excel-border-color solid;
+    }
+
+    & .cell {
+      padding: 5px;
+      width: $excel-cell-width;
+      height: $excel-row-height;
+      border-bottom: 1px $excel-border-color solid;
+      border-right: 1px $excel-border-color solid;
+      white-space: nowrap;
+      color: #111;
+    }
+
+    & .cell.selected {
+      outline: 2px solid #3c74ff;
+      border: none;
     }
   }
 }

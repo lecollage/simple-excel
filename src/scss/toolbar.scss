@@ -4,14 +4,13 @@
 .excel {
   &__toolbar {
     position: absolute;
-    top: $header-height;
+    top: $excel-header-height;
     display: flex;
     padding: 7px 10px;
-    border-top: 1px solid $border-color;
-    border-bottom: 1px solid $border-color;
-    height: $toolbar-height;
+    border-top: 1px solid $excel-border-color;
+    border-bottom: 1px solid $excel-border-color;
+    height: $excel-toolbar-height;
     width: 100%;
-    // background-color: azure;
 
     & .button {
       @include button;
